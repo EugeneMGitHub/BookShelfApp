@@ -88,20 +88,29 @@ class MainActivity : ComponentActivity() {
                     Modifier
                         .padding(start = 28.dp, end = 28.dp, top = 45.dp, bottom = 31.dp)
                         .fillMaxWidth()
-                        .height(IntrinsicSize.Min),
+//                        .height(IntrinsicSize.Min),
+                    .height(45.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(text = "20", fontWeight = FontWeight.Bold, fontFamily = NewYorkFamily, fontSize = 38.sp)
                     Column(Modifier.weight(1f)) {
-                        Text(text = "Thu", fontFamily = NewYorkFamily, fontSize = 14.sp, color = Color.Gray)
-                        Text(text = "Dec 2021", fontFamily = NewYorkFamily, fontSize = 14.sp, color = Color.Gray)
+                        Text(text = "Март", fontFamily = NewYorkFamily, fontSize = 14.sp, color = Color.Gray)
+                        Text(text = "среда, 2024", fontFamily = NewYorkFamily, fontSize = 14.sp, color = Color.Gray)
                     }
                     IconButton(onClick = {}) {
                        Icon(imageVector = Icons.Filled.QrCode, contentDescription = "QRCode")
                     }
+//                    Image(
+//                        painter = painterResource(id = R.drawable.img_profile),
+//                        contentDescription = "Profile Picture",
+//                        modifier = Modifier
+////                            .fillMaxHeight()
+//                            .heightIn(12.dp, 50.dp)
+//                            .clip(RoundedCornerShape(12.dp))
+//                    )
                     Image(
-                        painter = painterResource(id = R.drawable.img_profile),
+                        painter = painterResource(id = R.drawable.person),
                         contentDescription = "Profile Picture",
                         modifier = Modifier
 //                            .fillMaxHeight()
@@ -114,7 +123,7 @@ class MainActivity : ComponentActivity() {
             sheetContent = {
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = "My books",
+                    text = "Читали недавно",
                     fontFamily = NewYorkFamily,
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp,
@@ -146,7 +155,7 @@ class MainActivity : ComponentActivity() {
                                 Text(text = book.book.title, fontFamily = NewYorkFamily, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                                 Text(text = book.book.author, fontSize = 13.sp, color = Color.Gray)
                                 Spacer(modifier = Modifier.weight(1f))
-                                Text(text = "Return until ${book.returnDate}", color = MaterialTheme.colorScheme.primary, fontSize = 13.sp)
+                                Text(text = "Читали в последний раз: ${book.returnDate}", color = MaterialTheme.colorScheme.primary, fontSize = 13.sp)
                             }
                             IconButton(onClick = {}) {
                                 Icon(imageVector = Icons.Filled.MoreVert, contentDescription = "Menu")
@@ -168,7 +177,7 @@ class MainActivity : ComponentActivity() {
                     .padding(horizontal = 28.dp),
                 verticalAlignment = Alignment.CenterVertically){
                 Text(
-                    text = "New arrivals",
+                    text = "Новинки",
                     fontWeight = FontWeight.Bold,
                     fontFamily = NewYorkFamily,
                     fontSize = 20.sp,
@@ -177,7 +186,7 @@ class MainActivity : ComponentActivity() {
                     onClick = { },
 
                 ) {
-                    Text(text = "view all")
+                    Text(text = "Посмотреть все")
                     Spacer(modifier = Modifier.width(4.dp))
                     Icon(imageVector = Icons.Filled.ChevronRight, contentDescription = "")
                 }

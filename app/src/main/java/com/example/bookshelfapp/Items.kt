@@ -1,9 +1,10 @@
 package com.example.bookshelfapp
 
 val items = listOf(
-    Book("Muscle", R.drawable.book_muscle, "Alan Trotter"),
-    Book("Dominicana", R.drawable.book_dominicana, "Angie Cruz"),
-    Book("A New Program for Graphic Design", R.drawable.book_a_new, "David Reinfurt"),
+    Book("Идиот", R.drawable.dostoevski, "Федор Достоевский"),
+    Book("Зеленый свет", R.drawable.greenlight, "Мэттью Макконахи"),
+    Book("Нейрохакинг", R.drawable.neiro, "Толанд Виллемайер"),
+    Book("Код да Винчи", R.drawable.kod, "Дэн Браун"),
 )
 
 data class Book(
@@ -13,9 +14,11 @@ data class Book(
 )
 
 val myBookItems = listOf(
-    MyBook(Book("Just My Type", R.drawable.book_just_my_type, "Simon Garfield"), "25.03.2022", 75f),
-    MyBook(items[0], "25.02.2022", 80f),
-    MyBook(items[1], "21.01.2022", 90f),
+//    MyBook(Book("Just My Type", R.drawable.book_just_my_type, "Simon Garfield"), "15.03.2024", 75f),
+
+    MyBook(items[0], "15.03.2024", 17f),
+    MyBook(items[1], "21.02.2024", 55f),
+    MyBook(items[3], "17.01.2024", 92f),
 )
 
 data class MyBook(
